@@ -1,0 +1,11 @@
+[package]
+name = "trianglesay"
+version = "0.1.0"
+edition = "2024"
+
+[profile.release]
+strip = true
+codegen-units = 1
+opt-level = "z"
+[dependencies]
+clap = { version = "4.5.41", features = ["derive"] }
