@@ -13,7 +13,12 @@ fn main() {
     let default_word: Vec<String> = vec!["no freaking way".to_string()];
     let say_art: String = "     \\  /\\\n      \\/  \\\n      /*-* \\\n      ------\n".to_string();
 
-    let words = arg_word.unwrap_or(default_word);
+    let words = arg_word
+        .unwrap_or(default_word)
+        .iter()
+        .map(|x| x.split("\\n").map(|x| x.to_string()))
+        .flatten()
+        .collect::<Vec<String>>();
     let len = words
         .clone()
         .iter()
@@ -23,9 +28,7 @@ fn main() {
     let bars = std::iter::repeat('-').take(len + 2).collect::<String>();
 
     println!(" {bars}");
-    words.iter().for_each(|x| 
-        println!("< {x:len$} >")
-    );
+    words.iter().for_each(|x| println!("< {x:len$} >"));
     println!(" {bars}");
     println!("{say_art}")
 }
