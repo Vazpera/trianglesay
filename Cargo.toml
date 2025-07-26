@@ -14,5 +14,6 @@ categories = ["command-line-utilities"]
 strip = true
 codegen-units = 1
 opt-level = "z"
+
 [dependencies]
 clap = { version = "4.5.41", features = ["derive"] }

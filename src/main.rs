@@ -1,3 +1,4 @@
+extern crate clap;
 use clap::*;
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
