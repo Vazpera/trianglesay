@@ -1,7 +1,14 @@
 [package]
 name = "trianglesay"
 version = "0.1.0"
-edition = "2024"
+authors = ["Vazpera"]
+license = "MIT"
+description = "A cowsay clone based on Kuvina Saydaki's videos"
+readme = "README.md"
+homepage = "https://github.com/vazpera/trianglesay"
+repository = "https://github.com/vazpera/trianglesay"
+keywords = ["cli"]
+categories = ["command-line-utilities"]
 
 [profile.release]
 strip = true
