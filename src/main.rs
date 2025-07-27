@@ -4,7 +4,6 @@ use clap::*;
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
 struct Args {
-    #[arg(short, long, value_delimiter = ',')]
     say: Option<Vec<String>>,
     #[arg(short, long)]
     weather: bool,
